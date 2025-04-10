@@ -1,0 +1,11 @@
+{
+    "nombre": "Juan",
+    "apellidos": "Pérez López",
+    "aficiones": ["leer","informática","fútbol"],
+    "direccion": {
+        "calle": "Norte",
+        "numero": 14,
+        "cp": "13700",
+        "empadronado": true
+    }
+}

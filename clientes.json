@@ -1,0 +1,19 @@
+{
+    "clientes":[
+        {
+           "nombre":"Juan",
+           "edad":27,
+           "ciudad":"Villarrobledo" 
+        },
+        {
+            "nombre":"María",
+            "edad":25,
+            "ciudad":"El Toboso" 
+         },
+         {
+            "nombre":"Carlos",
+            "edad":23,
+            "ciudad":"San Clemente" 
+         }
+    ]
+}
