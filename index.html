@@ -6,10 +6,45 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Cliente</h1>
+    <form action="">
+        <p><label for="">Nombre: <input type="text" 
+            name="nombre" id="nombre"> </label></p>
+        <p><label for="">Apellidos: <input type="text" 
+                name="apellidos" id="apellidos"> </label></p>
+        <p><label for="">Edad: <input type="number" 
+                    name="edad" id="edad"> </label></p>   
+        <p><label for="">Suscrito: <input type="checkbox" 
+                        name="suscrito" id="suscrito" ></label></p>
+        <p><label for="">Calle: <input type="text" 
+                            name="calle" id="calle" ></label></p>  
+        <p><label for="">Aficiones: <input type="text" 
+            name="aficiones" id="aficiones" ></label></p> 
+         </form>
+
   <script>
     fetch('miCliente.json')
   .then(response => response.json())
-  .then(cliente => alert(cliente.apellidos));
+  .then(cliente => {
+        document.getElementById("nombre").value = cliente.nombre;
+        document.getElementById("apellidos").value = cliente.apellidos;
+        document.getElementById("edad").value = cliente.edad;
+        if ( cliente.suscrito ) {
+            document.getElementById("suscrito").setAttribute("checked","checked");
+        }
+        document.getElementById("calle").value = cliente.dirección.calle;
+        for ( i=0; i<cliente.aficiones.length; i++){
+            if ( i == cliente.aficiones.length - 1 ) {
+                document.getElementById("aficiones").value +=
+                cliente.aficiones[i]
+            } else {
+                document.getElementById("aficiones").value +=
+                cliente.aficiones[i]+","
+            }
+            
+        }
+  
+    });
 
   </script>
 </body>

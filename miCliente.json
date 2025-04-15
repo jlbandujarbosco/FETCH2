@@ -2,7 +2,7 @@
     "nombre": "Pepe",
     "apellidos": "López Aguirre",
     "edad": 56,
-    "suscrito": true,
+    "suscrito": false,
     "aficiones": ["leer","nadar","paddle"],
     "dirección": {
         "calle": "Norte",
